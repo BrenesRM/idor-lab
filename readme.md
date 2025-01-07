@@ -22,7 +22,7 @@ cd idor-lab
 ### Step 2: Build and Start the Lab
 Run the following command to set up the lab:
 ```bash
-docker-compose up
+docker-compose up --build
 ```
 This will start two Flask applications:
 - **Vulnerable app**: Accessible at `http://localhost:5000/profile?id=1`
@@ -95,10 +95,12 @@ The secure application implements:
 
 ### Vulnerable Endpoint
 - Endpoint: `GET /user/<user_id>`
+- curl.exe -X GET http://localhost:5000/profile?id=2
 - Behavior: Fetches user data directly without validating ownership or role.
 
 ### Secure Endpoint
 - Endpoint: `GET /user/<user_id>`
+- curl.exe -X GET http://localhost:5001/profile?id=2
 - Behavior: Restricts access based on the current user's role and the `user_id`.
 
 #### Access Control Logic
