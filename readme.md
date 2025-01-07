@@ -34,8 +34,8 @@ This will start two Flask applications:
 To simulate an IDOR vulnerability:
 1. Access any user's data:
    ```bash
-   curl http://localhost:5000/user/1
-   curl http://localhost:5000/user/2
+   curl.exe -X GET http://localhost:5000/profile?id=1
+   curl.exe -X GET http://localhost:5000/profile?id=2
    ```
 2. Note that the endpoint does not enforce any access controls, allowing unauthorized access to sensitive data.
 
@@ -43,8 +43,8 @@ To simulate an IDOR vulnerability:
 To test the mitigation:
 1. Attempt to access another user's data:
    ```bash
-   curl http://localhost:5001/user/1
-   curl http://localhost:5001/user/2
+   curl.exe -X GET http://localhost:5001/profile?id=1
+   curl.exe -X GET http://localhost:5001/profile?id=2
    ```
 2. The endpoint will enforce role-based access control and return an **Access Denied (403)** error for unauthorized users.
 
