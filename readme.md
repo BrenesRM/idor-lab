@@ -15,7 +15,7 @@ This lab demonstrates the Insecure Direct Object Reference (IDOR) vulnerability 
 
 ### Step 1: Clone the Repository
 ```bash
-git clone (https://github.com/BrenesRM/idor-lab.git)
+git clone https://github.com/BrenesRM/idor-lab.git
 cd idor-lab
 ```
 
