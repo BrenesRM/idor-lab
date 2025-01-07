@@ -4,6 +4,8 @@ This lab demonstrates the Insecure Direct Object Reference (IDOR) vulnerability 
 1. **`vulnerable_app`**: A version that simulates the IDOR vulnerability.
 2. **`secure_app`**: A secure version that implements basic access control to prevent unauthorized access.
 
+> **Disclaimer:** This project is for educational and testing purposes only. Do not deploy this application in a production environment.
+
 ---
 
 ## Setup Instructions
